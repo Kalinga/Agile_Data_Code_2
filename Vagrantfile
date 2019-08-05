@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
+	  vb.name = "AgileData"
       # Customize the amount of memory on the VM:
       vb.memory = "12288"
   end
