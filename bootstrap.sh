@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+LOG_FILE="/home/vagrant/bootstrap.sh.log"
+
 sudo chown -R vagrant /home/vagrant
 sudo chgrp -R vagrant /home/vagrant
 
@@ -92,6 +94,7 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 echo 'export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop' | sudo tee -a /home/vagrant/.bash_profile
 
 # Give to vagrant
+echo $LOG_FILE
 echo "Giving hadoop to user vagrant ..." | tee -a $LOG_FILE
 sudo chown -R vagrant /home/vagrant/hadoop
 sudo chgrp -R vagrant /home/vagrant/hadoop
